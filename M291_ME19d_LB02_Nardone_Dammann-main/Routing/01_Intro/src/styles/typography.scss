@@ -1,0 +1,40 @@
+/* Styling Components
+demo-03: Importing SCSS into a Scoped Component
+*/
+
+//Variables
+$color-green: #4fc08d;
+$color-grey: #2c3e50;
+$color-blue: #003366;
+
+/*
+Using the addition symbol + means the elements placed after
+the first element will be styled if they match the condition.
+
+For example, h1 + h2 will dictate that all H2 elements after H1 will be
+styled in a way, but H3 will not.
+ */
+h1 {
+  margin-top: 60px;
+  text-align: center;
+  color: $color-grey;
+
+  + h2 {
+    text-align: center;
+    color: $color-green;
+  }
+}
+
+//ul > li will select every <li> element inside of a <ul> element for styling
+ul {
+  display: block;
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 30px;
+  border: 1px solid rgba(0,0,0,0.25);
+
+  > li {
+    color: $color-grey;
+    margin-bottom: 4px;
+  }
+}
